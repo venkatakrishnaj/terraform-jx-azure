@@ -20,6 +20,10 @@ data "azurerm_subscription" "current" {
 data "azurerm_client_config" "current" {
 }
 
+output "object_id" {
+  value = data.azurerm_client_config.current.object_id
+}
+
 // ----------------------------------------------------------------------------
 // Setup Azure Resource Groups
 // ----------------------------------------------------------------------------
